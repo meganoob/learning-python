@@ -1,21 +1,5 @@
-#print 1 + 1
-isobel = "bestpopples"
-ryan = "notpopples"
-if "popples" in isobel:
-  print isobel
-
-isobel = False
-
-if isobel:
-  print "isobel is true"
-
-isobel = "ryan"
-print isobel
-
 cars = ["mustang", "bmw", "mercedes", "audi", "bmw"]
 print cars[0:2]
-
-
 
 #print "test {0} {1}".format("ryan", "isobel")
 #print str(int("1") + 4)

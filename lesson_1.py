@@ -31,7 +31,7 @@ class Puppy():
     self.age = age
 
   def __str__(self):
-    return "breed: {0}, sex: {1}, age: {2} months".format(self.breed, self.sex, str(self.age))
+    return "breed: {0}, sex: {1}, age: {2} weeks".format(self.breed, self.sex, str(self.age))
 
   def is_too_old(self):
     if self.age > 12:

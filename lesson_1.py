@@ -1,3 +1,6 @@
+import pprint
+from puppymodule.puppies import Puppy
+
 cars = ["mustang", "bmw", "mercedes", "audi", "bmw"]
 print cars[0:2]
 
@@ -23,23 +26,33 @@ for car in cars:
   print car
   print car.whats_my_name()
 
-
-class Puppy():
-  def __init__(self, breed, sex, age):
-    self.breed = breed
-    self.sex = sex
-    self.age = age
-
-  def __str__(self):
-    return "breed: {0}, sex: {1}, age: {2} weeks".format(self.breed, self.sex, str(self.age))
-
-  def is_too_old(self):
-    if self.age > 12:
-      return True
-    else:
-      return False
-
 puppies = [Puppy("corgi", "male", 6), Puppy("labrador", "female", 14), Puppy("pug", "male", 8)]
+
+named_puppies = { "Ralph" : Puppy("corgi", "male", 6), "Mindy" : Puppy("labrador", "female", 14), "Harold" : Puppy("pug", "male", 8) }
+
 for puppy in puppies:
   if not puppy.is_too_old():
     print str(puppy)
+
+pp = pprint.PrettyPrinter(indent=4)
+pp.pprint(puppies)
+
+print named_puppies["Ralph"]
+
+for k, v in named_puppies.items():
+  print k
+
+for v in named_puppies.itervalues():
+  print v.breed 
+
+f = open("isobel.txt", "w")
+myvalues = "\n".join(["test1", "test2", "test3"])
+f.write(myvalues)
+f.close()
+
+f = open("isobel.txt", "r")
+myfile = f.read()
+if "te" in myfile:
+  print "POOP"
+
+print myfile
